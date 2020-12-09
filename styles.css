@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --h2_size: 24px;
+  --h2_weight: 800;
+  --grey_color: #ede8e9;
+  --paragraph_size: 16px;
+  --paragraph_color: #908e8e;
+  --label_text_size: 14px;
+}
+
+.main {
+  padding: 1rem;
+}
+
+/* header styles */
+.header {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* title styles */
+
+.title h2 {
+  text-align: center;
+  font-size: var(--h2_size);
+  font-weight: bold;
+}
+/* form styles */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subtitle {
+  font-size: var(--paragraph_size);
+  color: var(--paragraph_color);
+  width: 100%;
+  margin: 1.5rem 0 1rem;
+}
+
+.content-wrapper {
+  width: 30vw;
+}
+
+/* service styles & payment */
+.form-check,
+.form-select,
+.form-control {
+  border: 1px solid var(--grey_color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.form-check-label {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.amount {
+  position: absolute;
+  right: 5%;
+}
+
+/* custom radio input */
+
+.form-check-input {
+  border: 1px solid transparent;
+  background-color: #c6d8d3;
+}
+.form-check .form-check-input {
+  margin-left: 0;
+}
+
+.form-check .form-check-input {
+  background-color: var(--grey_color);
+}
+.form-check-input:checked {
+  background-color: #c6d8d3;
+  border-color: #c6d8d3;
+}
+
+/* stepper */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 33.3%;
+}
+
+#inlineCheckbox2::after {
+  content: "";
+  opacity: 0.3;
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: #c6d8d3;
+  position: absolute;
+  top: 25%;
+  left: 65%;
+}
+#inlineCheckbox2::before {
+  content: "";
+  display: block;
+  opacity: 0.3;
+  width: 70%;
+  height: 2px;
+  background-color: #c6d8d3;
+  position: absolute;
+  top: 25%;
+  right: 65%;
+}
