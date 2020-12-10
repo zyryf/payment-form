@@ -2,116 +2,119 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veventy Task</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veventy Task</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section class="main">
-        <div class="header">
-            <img src="./assets/icon.png" alt="icon">
-            <img src="./assets/avatar.png" alt="avatar">
+  <section class="main ">
+    <div class="header">
+      <img src="./assets/icon.png" alt="icon">
+      <img src="./assets/avatar.png" alt="avatar">
+    </div>
+    <div class="title">
+      <h2>Select additional services</h2>
+    </div>
+    <form>
+      <div class="content-wrapper">
+        <p class='subtitle'>Services</p>
+        <div class="form-check">
+          <input class="form-check-input custom-checkbox" type="checkbox" name="massage-and-spa" id="massage-and-spa">
+          <label class="form-check-label" for="massage-and-spa">
+            Massage and Spa
+            <span class="amount">+$50.00</span>
+          </label>
         </div>
-        <div class="title">
-            <h2>Select additional services</h2>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="airport-pickup" id="airport-pickup" checked>
+          <label class="form-check-label" for="airport-pickup">
+            Ariport pickup
+            <span class="amount">+$20.00</span>
+          </label>
         </div>
-        <form>
-            <div class="content-wrapper">
-                <p class='subtitle'>Services</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="massage-and-spa" id="massage-and-spa">
-                    <label class="form-check-label" for="massage-and-spa">
-                        Massage and Spa
-                        <span class="amount">+$50.00</span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="airport-pickup" id="airport-pickup" checked>
-                    <label class="form-check-label" for="airport-pickup">
-                        Ariport pickup
-                        <span class="amount">+$20.00</span>
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="breakfast" id="breakfast" checked>
-                    <label class="form-check-label" for="breakfast">
-                        Breakfast
-                        <span class="amount">+$15.00</span>
-                    </label>
-                </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="breakfast" id="breakfast" checked>
+          <label class="form-check-label" for="breakfast">
+            Breakfast
+            <span class="amount">+$15.00</span>
+          </label>
+        </div>
 
-
-                <p class="subtitle">Payment for booking</p>
-
-
-               
-                    <select class="form-select" aria-label="Default select example">
-
-                        <option selected> Credit card or debit Visa card</option>
-                        <option value="1">Another</option>
-    
-                    </select>
-    
-              
-               
-
-                <div class="form-floating ">
-                    <input type="text" class="form-control" id="card-number" placeholder="Card Number">
-                    <label for="card-number">Card Number</label>
-                </div>
-
-
-                <div class="row ">
-                    <div class="col-md  pl-1">
-                      <div class="form-floating">
-                        <input type="text" id="card-expiration" class="form-control my-0" placeholder="Expiration">
-                        <label for="card-expiration">Expiration</label>
-                      </div>
-                    </div>
-                    <div class="col-md pr-1">
-                      <div class="form-floating">
-                        <input type="text" id="CVV" class="form-control my-0" placeholder="CVV">
-                        <label for="CVV">CVV</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="stepper">
-
-                    <div class="step">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox1"  checked>
-                        <label class="form-check-label" for="inlineCheckbox1" >Booking</label>
-                      </div>
-                      <div class="step">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox2"   checked>
-                        <label class="form-check-label" for="inlineCheckbox2">Checkout</label>
-                      </div>
-                      <div class="step">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox3"  disabled>
-                        <label class="form-check-label" for="inlineCheckbox3">Confirm</label>
-                      </div>
-        
-                    </div>
-                  </div>
-                  
-           
-
-
-        </form>
+        <p class="subtitle">Payment for booking</p>
     
 
-    </section>
+        <select class="form-select" aria-label="Default select example">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
+          <option selected > Credit card or debit Visa card</option>
+          <option value="1">Another</option>
+
+        </select>
+
+        <div class="form-floating ">
+          <input type="text" class="form-control" id="card-number" placeholder="Card Number">
+          <label for="card-number">Card Number</label>
+        </div>
+
+
+        <div class='row g-2'>
+          <div class="col-md ">
+            <div class="form-floating">
+              <input type="text" id="card-expiration" class="form-control my-0" placeholder="Expiration">
+              <label for="card-expiration">Expiration</label>
+            </div>
+          </div>
+          <div class="col-md ">
+            <div class="form-floating">
+              <input type="text" id="CVV" class="form-control my-0" placeholder="CVV">
+              <label for="CVV">CVV</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="summary">
+
+      <div class="buttons-wrapper">
+
+        <button type="button" class="btn btn-light">Back</button>
+      <button type="button" class="btn btn-danger ">Next</button>
+      </div>
+
+      <div class="stepper">
+        <div class="step">
+          <input class="form-check-input" type="radio" id="inlineCheckbox1" checked>
+          <label class="form-check-label" for="inlineCheckbox1">Booking</label>
+        </div>
+
+        <div class="step">
+          <span id="left-line"></span>
+          <span id="right-line"></span>
+          <input class="form-check-input" type="radio" id="inlineCheckbox2" checked>
+          <label class="form-check-label" for="inlineCheckbox2">Checkout</label>
+        </div>
+        <div class="step">
+          <input class="form-check-input" type="radio" id="inlineCheckbox3" disabled>
+          <label class="form-check-label" for="inlineCheckbox3">Confirm</label>
+        </div>
+
+      </div>
+     
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,16 +1,22 @@
+/* css reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+/* variables */
 :root {
-  --h2_size: 24px;
-  --h2_weight: 800;
-  --grey_color: #ede8e9;
-  --paragraph_size: 16px;
-  --paragraph_color: #908e8e;
-  --label_text_size: 14px;
+  --super_bold: 800;
+  --bold: 700;
+  --light_grey: #ede8e9;
+  --dark_grey: #908e8e;
+  --grey_green: #c6d8d3;
+  --red: #eb5e55;
+  --dark: #3a3335;
+  --text_size_lg: 24px;
+  --text_size_md: 16px;
+  --text_size_sm: 14px;
 }
 
 .main {
@@ -20,7 +26,7 @@
 /* header styles */
 .header {
   width: 80vw;
-  margin: 0 auto;
+  margin: 2rem auto;
   display: flex;
   justify-content: space-between;
 }
@@ -29,8 +35,9 @@
 
 .title h2 {
   text-align: center;
-  font-size: var(--h2_size);
-  font-weight: bold;
+  font-size: var(--text_size_lg);
+  font-weight: var(--super_bold);
+  color: var(--dark);
 }
 /* form styles */
 
@@ -40,8 +47,8 @@ form {
   align-items: center;
 }
 .subtitle {
-  font-size: var(--paragraph_size);
-  color: var(--paragraph_color);
+  font-size: var(--text_size_sm);
+  color: var(--dark_grey);
   width: 100%;
   margin: 1.5rem 0 1rem;
 }
@@ -50,11 +57,17 @@ form {
   width: 30vw;
 }
 
+@media (max-width: 768px) {
+  .content-wrapper {
+    width: 70vw;
+  }
+}
+
 /* service styles & payment */
 .form-check,
 .form-select,
 .form-control {
-  border: 1px solid var(--grey_color);
+  border: 1px solid var(--light_grey);
   border-radius: 8px;
   padding: 1rem;
   margin: 0.5rem 0;
@@ -63,37 +76,89 @@ form {
 
 .form-check-label {
   cursor: pointer;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  color: var(--dark);
+  font-size: var(--text_size_sm);
+  font-weight: var(--bold);
 }
 
 .amount {
   position: absolute;
   right: 5%;
 }
+.form-floating label {
+  color: var(--dark_grey);
+  font-weight: var(--bold);
+  font-size: var(--text_size_sm);
+}
 
-/* custom radio input */
+.form-select {
+  font-size: var(--text_size_sm);
+  font-weight: var(--bold);
+  color: var(--dark);
+}
+
+/* custom checkbox input */
 
 .form-check-input {
   border: 1px solid transparent;
-  background-color: #c6d8d3;
+  background-color: var(--grey_green);
 }
 .form-check .form-check-input {
   margin-left: 0;
+  background-color: var(--light_grey);
+  border-radius: 50%;
+  -webkit-appearance: none;
+  position: relative;
 }
 
-.form-check .form-check-input {
-  background-color: var(--grey_color);
-}
 .form-check-input:checked {
-  background-color: #c6d8d3;
-  border-color: #c6d8d3;
+  background-color: var(--grey_green);
+  border-color: var(--grey_green);
 }
 
-/* stepper */
+form .form-check-input:checked::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  border: 0.2rem solid var(--grey_green);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+/* summary */
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
 .stepper {
   display: flex;
   justify-content: space-between;
-  margin-top: 5rem;
+  width: 40%;
+}
+
+@media (max-width: 768px) {
+  .stepper {
+    width: 70vw;
+  }
+}
+
+.step .form-check-label {
+  margin-left: 0;
+  margin-top: 10px;
+  color: var(--dark_grey);
+  font-weight: var(--bold);
+  font-size: var(--text_size_sm);
 }
 .step {
   display: flex;
@@ -104,25 +169,59 @@ form {
   width: 33.3%;
 }
 
-#inlineCheckbox2::after {
-  content: "";
+#left-line {
   opacity: 0.3;
   display: block;
   width: 70%;
   height: 2px;
-  background-color: #c6d8d3;
+  background-color: var(--grey_green);
   position: absolute;
   top: 25%;
   left: 65%;
 }
-#inlineCheckbox2::before {
+
+#right-line {
   content: "";
   display: block;
   opacity: 0.3;
   width: 70%;
   height: 2px;
-  background-color: #c6d8d3;
+  background-color: var(--grey_green);
   position: absolute;
   top: 25%;
   right: 65%;
+}
+/* buttons */
+.buttons-wrapper {
+  transform: translateY(3rem);
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .buttons-wrapper {
+    transform: translateY(-3rem);
+  }
+}
+.btn {
+  width: 100px;
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(--text_size_sm);
+  font-weight: var(--bold);
+}
+
+.btn-danger {
+  background-color: var(--red);
+}
+.btn-light {
+  background-color: linear-gradient(
+      0deg,
+      rgba(58, 51, 53, 0.04),
+      rgba(58, 51, 53, 0.04)
+    ),
+    #ffffff;
+  color: var(--dark_grey);
 }
