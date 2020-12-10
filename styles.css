@@ -19,6 +19,12 @@
   --text_size_sm: 14px;
 }
 
+@media (max-width: 320px) {
+  :root {
+    --text_size_sm: 12px;
+  }
+}
+
 .main {
   padding: 1rem;
 }
@@ -63,9 +69,9 @@ form {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 576px) {
   .content-wrapper {
-    width: 90vw;
+    width: 85vw;
   }
 }
 
@@ -102,6 +108,19 @@ form {
   font-size: var(--text_size_sm);
   font-weight: var(--bold);
   color: var(--dark);
+  padding-left: 4rem;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.card-selection-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  z-index: 99;
 }
 
 /* custom checkbox input */

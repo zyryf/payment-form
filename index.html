@@ -48,14 +48,15 @@
         </div>
 
         <p class="subtitle">Payment for booking</p>
-    
 
-        <select class="form-select" aria-label="Default select example">
-
-          <option selected > Credit card or debit Visa card</option>
-          <option value="1">Another</option>
-
-        </select>
+        <div class="select-wrap"><label for="card-selection" class="card-selection-label"> <img src="./assets/visa.png" alt="visa" srcset=""> </label>
+          <select class="form-select" aria-label="Default select example" id="card-selection">
+  
+            <option selected > Credit card or debit Visa card</option>
+            <option value="1">Another</option>
+  
+          </select></div>
+        
 
         <div class="form-floating ">
           <input  class="form-control" id="card-number" placeholder="Card Number">
